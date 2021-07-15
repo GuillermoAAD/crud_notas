@@ -1,0 +1,52 @@
+
+El proyecto constará en hacer un CRUD en web o Laravel con su login. 
+
+CRUD de notas
+
+#######     Base de Datos     #######
+bd_notas
+
+###   Tablas
+
+## usuario
+id_usuario     LLave primaria, Unico, No nulo, autoincrementable, entero
+username       varchar(20)
+pass           varchar(20)
+
+## nota
+id_nota        LLave primaria, Unico, No nulo, autoincrementable, entero
+titulo         varchar(50)
+descripcion    text
+fecha          fecha, automatica
+id_usuario     Llave foranea
+
+
+
+Archivos a necesitar
+conexion.php
+login.php
+index.php
+crear_nota.php
+actualizar_nota.php
+eliminar_nota.php
+
+
+
+ACTIVIDADES                      ESTADO
+
+Crear BD                         OK
+Cargar primeros datos a BD       OK
+Conexion a BD desde pagina       OK
+login
+Mostrar notas
+Editar notas
+Agregar notas nuevas
+Eliminar notas
+
+
+
+git init
+git add .
+git status
+git commit -m "se creo BD, se probo conexion BD"
+git push origin master
