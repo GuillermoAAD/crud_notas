@@ -8,8 +8,8 @@ $bd = 'db_notas';
  
 $conn = mysqli_connect($host, $user_bd, $pass_bd, $bd);
 
-if (!$conn) {
-   echo "error al conectar al Servidor de BD";
+if (!isset($conn)) {
+   echo "Error al conectar al Servidor de BD.";
 }
 
 

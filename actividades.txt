@@ -38,7 +38,7 @@ Crear BD                         OK
 Cargar primeros datos a BD       OK
 Conexion a BD desde pagina       OK
 login
-Mostrar notas
+Mostrar notas                    OK
 Editar notas
 Agregar notas nuevas
 Eliminar notas
@@ -49,4 +49,6 @@ git init
 git add .
 git status
 git commit -m "se creo BD, se probo conexion BD"
+
+git remote add origin https://github.com/GuillermoAAD/crud_notas.git
 git push origin master
