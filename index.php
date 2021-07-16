@@ -10,8 +10,10 @@
    <body>
 
    <?php 
+      $id_usuario = 1; //modificar despues en base al login
       $query = "SELECT *
-      FROM nota";
+      FROM nota
+      WHERE id_usuario = '$id_usuario'";
 
       $result = mysqli_query($conn, $query);
 
@@ -21,22 +23,9 @@
       $numRows = mysqli_num_rows($result);
    ?>
 
-   
+   <h1>Mis Notas: <?= $numRows?> </h1> <hr>
 
-   <table class='table'>
-      <tr>
-         <td colspan='6' >
-            <h1 class='numAdmins'>Notas: <?= $numRows?> </h1> <hr>
-         </td>
-      </tr>
-      <tr>
-                     <!--<td></td>-->
-         <td colspan='6'>
-            <a href='formulario_insertarProducto.php'> 
-               <input class='btnListado inserta' type='button' value='Agregar un nuevo Producto' > 
-            </a>
-         </td>
-      </tr>
+   <table>
       <tr>
          <td>
             TÍTULO
@@ -52,25 +41,60 @@
          </td>
       </tr>
 
+      <!--Para agregar nueva nota -->
+      <tr>
+         <form action='crear_nota.php' method='POST'>
+            <td>
+               <input name='titulo' type='text' placeholder='Escribe el título.' autofocus/>
+            </td>
+            <td>
+               <textarea name='descripcion' rows='2' 
+               placeholder='Ingresa una descripción.'></textarea>
+            </td>
+            <td>
+               -------
+            </td>
+            <td>
+               <input type='hidden' name='id_usuario' value='<?= $id_usuario ?>' />
+               <!-- <?php echo "<a href='q.php'> " ?> -->
+                  <input name='crear_nota' type='submit' value='Agregar Nota' >
+               <!-- </a> -->
+            </td>
+         </form>
+      </tr>
+   
 
       <?php
       while( $row = mysqli_fetch_array($result) ) { ?>
          <tr>
-            <td><?= $row['titulo'] ?></td>
-            <td><?= $row['descripcion'] ?></td>
-            <td><?= $row['fecha'] ?></td>
-         
-            <?php $id= $row['id_nota']; ?>
-         
-            <td>
-               <?php echo "<a href='formulario_modificaProducto.php?id=$id'> " ?>
-                  <input class='btnListado modifica' type='button' value='Modificar' >
-               </a>
-                     
-               <?php echo "<a href='eliminaProducto.php?id=$id'> " ?>
-                  <input class='btnListado elimina' type='button' value='Eliminar'> 
-               </a>
-            </td>
+            <form action='actualizar_nota.php' method='POST'>
+               <?php 
+               $id_nota = $row['id_nota']; 
+               $fecha = $row['fecha'];
+               ?>
+               
+               <td> 
+                  <input name='titulo' type='text' placeholder='Escribe el título.' 
+                  value='<?= $row['titulo'] ?>'/>
+               </td>
+               
+               <td>
+                  <textarea name='descripcion' rows='2' 
+                  placeholder='Ingresa una descripción.'><?= $row['descripcion'] ?></textarea>
+               </td>
+
+               <td><?= $row['fecha'] ?></td>
+            
+               <td>
+                  <input type='hidden' name='id_nota' value='<?= $id_nota ?>' />
+                  <input type='hidden' name='id_usuario' value='<?= $id_usuario ?>' />
+                  
+                  <input name='actualizar_nota' type='submit' value='Actualizar' >
+                  
+                  <!--   <input type='button' value='Eliminar'>  -->
+                  
+               </td>
+            </form>
                
          </tr>
       <?php } ?>

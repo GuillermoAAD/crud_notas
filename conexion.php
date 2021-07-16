@@ -1,4 +1,3 @@
-  
 <?php
 
 $host = 'localhost';
@@ -11,6 +10,5 @@ $conn = mysqli_connect($host, $user_bd, $pass_bd, $bd);
 if (!isset($conn)) {
    echo "Error al conectar al Servidor de BD.";
 }
-
 
 ?>

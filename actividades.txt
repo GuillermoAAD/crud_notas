@@ -29,6 +29,7 @@ index.php
 crear_nota.php
 actualizar_nota.php
 eliminar_nota.php
+styles.css
 
 
 
@@ -39,8 +40,8 @@ Cargar primeros datos a BD       OK
 Conexion a BD desde pagina       OK
 login
 Mostrar notas                    OK
-Editar notas
-Agregar notas nuevas
+Editar notas                     OK
+Agregar notas nuevas             OK
 Eliminar notas
 
 
@@ -48,7 +49,7 @@ Eliminar notas
 git init
 git add .
 git status
-git commit -m "se creo BD, se probo conexion BD"
+git commit -m "Se muestran las notas guardadas en bd"
 
 git remote add origin https://github.com/GuillermoAAD/crud_notas.git
 git push origin master
