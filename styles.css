@@ -1,4 +1,154 @@
-table, td, th {
-   border: 1px solid red;
-   width: 70%;
+body {
+   font-size: 16px;
+   color: #fff;
+   
+   background-color: #5995DA;
+
+   /*background-image: linear-gradient(30deg, rgb(80, 154, 156), white);*/
 }
+.login {
+   width: 200px;
+   color: #414141;
+   background-color: #EEEEEE;    
+   margin: auto;
+   margin-top: 50px;
+   justify-content: center;
+   border-radius: 15px;
+   text-align: center;
+   border: 1px solid #414141;
+   padding: 20px;
+}
+
+input {
+   margin: 10px;
+}
+
+.boton {
+   color: #FFF;
+   background-color: #5995DA;    
+   font-weight: bold;
+   text-align: center;
+   border: 2px solid #414141;    
+   border-radius: 5px;
+   width: 150px;
+   height: 40px;
+   /*margin: 20px;*/
+}
+
+.boton:hover{
+   color: #FFF;
+   background-color: #76AEED;    
+}
+
+.boton:active{
+   color: #FFF;
+   background-color: #5995DA;       
+}
+
+.btn-verde{
+   background-color: #59da8a;    
+   width: 100px;   
+   padding: 10px;
+}
+.btn-verde:hover{
+   color: #FFF;
+   background-color: #76ed76;    
+}
+
+.btn-verde:active{
+   color: #FFF;
+   background-color: #59da8a;       
+}
+
+.btn-rojo{
+   background-color: #da5959;
+   width: 100px;   
+   padding: 10px;
+}
+
+.btn-rojo:hover{
+   background-color: #ed7676;    
+}
+
+.btn-rojo:active{
+   background-color: #da5959;       
+}
+
+table {
+   width: 90%;
+   margin: auto;
+   background-color: #414141;
+   border-radius: 15px;
+   text-align: center;
+}
+
+th {
+   padding: 18px;
+   background-color: #414141;
+   border-radius: 15px;
+}
+
+td {
+   border-radius: 15px;
+   background-color: #EEEEEE;
+   margin-top: 10px;
+   color: #414141;
+
+}
+
+.td-btn {
+   background-color: #414141;
+   
+}
+
+.titulo {
+   color: #414141;
+   margin: 0px;
+   padding: 18px;
+   border: 1px solid #414141;
+   border-radius: 15px;
+   font-size: 16px;
+}
+
+.descripcion {
+   color: #414141;
+   margin: 0px;
+   padding: 8px;
+   border: 1px solid #414141;
+   border-radius: 15px;
+   font-size: 16px;
+}
+
+
+.cabecera {
+   background-color: #414141;
+   border-radius: 15px;
+   display: flex;
+   /*border: 1px solid red;*/
+
+}
+
+.contador {
+   /*border: 1px solid red;*/
+   width: 80%;
+   text-align: center;
+}
+
+.logout {
+   color: #EEEEEE;  
+   /*border: 1px solid red;*/
+   text-align: end;
+   width: 20%;
+   vertical-align: middle;
+   margin: 10px;
+}
+
+a:visited,
+a:active{
+   color: #FFf;  
+}
+
+a:hover{
+   color: #aaaaaa;  
+}
+

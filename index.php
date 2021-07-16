@@ -35,45 +35,48 @@ include('conexion.php')
 
    <div class='cabecera'>
       <div class='contador'>
+      <h1>Notas de <?=$username?>: <?= $numRows?>  </h1> 
       </div>
       <div class='logout'>
          <a href='logout.php'>Salir.</a>
       </div>
    </div>
 
-   <h1>Notas de <?=$username?>: <?= $numRows?> </h1> <hr>
+   <hr>
 
    <table>
       <tr>
-         <td>
+         <th>
             TÍTULO
-         </td>
-         <td>
+         </th>
+         <th>
             DESCRIPCIÓN
-         </td>
-         <td>
+         </th>
+         <th>
             FECHA DE CREACION
-         </td>
-         <td colspan='2'>
-         </td>
+         </th>
+         <th colspan='2'>
+         </th>
       </tr>
 
       <!--Para agregar nueva nota -->
       <tr>
          <form action='crear_nota.php' method='POST'>
             <td>
-               <input name='titulo' type='text' placeholder='Escribe el título.' autofocus/>
+               <input name='titulo' type='text' placeholder='Escribe el título.' 
+               autofocus class='titulo'/>
             </td>
             <td>
                <textarea name='descripcion' rows='2' 
-               placeholder='Ingresa una descripción.'></textarea>
+               placeholder='Ingresa una descripción.' class='descripcion'></textarea>
             </td>
             <td>
                -------
             </td>
-            <td colspan='2'>
+            <td colspan='2' class='td-btn'>
                <input type='hidden' name='id_usuario' value='<?= $id_usuario ?>' />
-                  <input name='crear_nota' type='submit' value='Agregar Nota' >
+                  <input name='crear_nota' type='submit' value='Agregar Nota'
+                  class='boton'>
             </td>
          </form>
       </tr>
@@ -90,26 +93,29 @@ include('conexion.php')
                
                <td> 
                   <input name='titulo' type='text' placeholder='Escribe el título.' 
-                  value='<?= $row['titulo'] ?>'/>
+                  value='<?= $row['titulo'] ?>' class='titulo'/>
                </td>
                
-               <td>
+               <td> 
                   <textarea name='descripcion' rows='2' 
-                  placeholder='Ingresa una descripción.'><?= $row['descripcion'] ?></textarea>
+                  placeholder='Ingresa una descripción.' 
+                  class='descripcion'><?= $row['descripcion'] ?></textarea>
                </td>
 
                <td><?= $row['fecha'] ?></td>
             
-               <td>
+               <td class='td-btn'>
                   <input type='hidden' name='id_nota' value='<?= $id_nota ?>' />
-                  <input name='actualizar_nota' type='submit' value='Actualizar' >
+                  <input name='actualizar_nota' type='submit' value='Actualizar' 
+                  class='boton btn-verde'>
                </td>
             </form>
 
-            <td>
+            <td class='td-btn'>
                <form action='eliminar_nota.php' method='POST'>
                   <input type='hidden' name='id_nota' value='<?= $id_nota ?>' />
-                  <input name='eliminar_nota' type='submit' value='Eliminar' >
+                  <input name='eliminar_nota' type='submit' value='Eliminar' 
+                  class='boton btn-rojo'>
                </form>
             </td>
                

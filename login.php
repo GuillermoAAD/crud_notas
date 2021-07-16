@@ -11,16 +11,24 @@ if (isset($_SESSION["id_usuario"])) {
    <head>
       <meta charset='UTF-8'/>
       <title>Login</title>
+      <link rel='stylesheet' href='styles.css'>
    </head>
    <body>
       <div class='login'>
-      <form action='login_validador.php' method='POST'>
-         Usuario:
-         <input name='username' type='text' autofocus>
-         Contraseña:
-         <input name='pass' type='text'>
-         <input name='login' type='submit' value='Iniciar Sesion'>
-      </form>
+         <h1>Login</h1>
+         <form action='login_validador.php' method='POST'>
+            Usuario:
+            <br>
+            <input name='username' type='text' autofocus 
+            placeholder='Ingrese root' value='root'>
+            <br>
+            Contraseña:
+            <br>
+            <input name='pass' type='password' 
+            placeholder='Ingrese root' value='root'>
+            <br>
+            <input name='login' type='submit' value='Iniciar Sesion' class='boton'>
+         </form>
       </div>
 
    </body>

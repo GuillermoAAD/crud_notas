@@ -49,13 +49,15 @@ Activar sesiones                 OK
 logout                           OK
 
 CSS
+CSS login                        OK
+CSS index                        OK
 
 
 
 git init
 git add .
 git status
-git commit -m "login, logout y sesiones"
+git commit -m "CSS, bd exportada y capturas"
 
 git remote add origin https://github.com/GuillermoAAD/crud_notas.git
 git push origin master
