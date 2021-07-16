@@ -8,11 +8,11 @@ PRIMARY KEY (id_usuario) );
  
 INSERT INTO usuario
 (id_usuario, username, pass) 
-VALUES (NULL, 'user1', 'user1');
+VALUES (NULL, 'root', 'root');
 
 INSERT INTO usuario
 (id_usuario, username, pass) 
-VALUES (NULL, 'user2', 'user2');
+VALUES (NULL, 'user', 'user');
 
 CREATE TABLE db_notas.nota
 (id_nota INT NOT NULL AUTO_INCREMENT, 

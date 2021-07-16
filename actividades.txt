@@ -25,6 +25,8 @@ id_usuario     Llave foranea
 Archivos a necesitar
 conexion.php
 login.php
+login_validador.php
+logout.php
 index.php
 crear_nota.php
 actualizar_nota.php
@@ -38,18 +40,22 @@ ACTIVIDADES                      ESTADO
 Crear BD                         OK
 Cargar primeros datos a BD       OK
 Conexion a BD desde pagina       OK
-login
+login                            OK
 Mostrar notas                    OK
 Editar notas                     OK
 Agregar notas nuevas             OK
 Eliminar notas                   OK
+Activar sesiones                 OK
+logout                           OK
+
+CSS
 
 
 
 git init
 git add .
 git status
-git commit -m "Permite eliminar notas"
+git commit -m "login, logout y sesiones"
 
 git remote add origin https://github.com/GuillermoAAD/crud_notas.git
 git push origin master

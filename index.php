@@ -1,4 +1,13 @@
-<?php include('conexion.php')?>
+<?php 
+//revisa si hay sesion activa, si no manda al login
+session_start();
+if (!isset($_SESSION["id_usuario"])) {
+   header('Location: login.php');
+}
+
+//Inicia conexion a bd
+include('conexion.php')
+?>
 
 <!DOCTYPE html>
 <html lang='en'>
@@ -10,7 +19,8 @@
    <body>
 
    <?php 
-      $id_usuario = 1; //modificar despues en base al login
+      $id_usuario = $_SESSION["id_usuario"];
+      $username = $_SESSION["username"];
       $query = "SELECT *
       FROM nota
       WHERE id_usuario = '$id_usuario'";
@@ -23,7 +33,15 @@
       $numRows = mysqli_num_rows($result);
    ?>
 
-   <h1>Mis Notas: <?= $numRows?> </h1> <hr>
+   <div class='cabecera'>
+      <div class='contador'>
+      </div>
+      <div class='logout'>
+         <a href='logout.php'>Salir.</a>
+      </div>
+   </div>
+
+   <h1>Notas de <?=$username?>: <?= $numRows?> </h1> <hr>
 
    <table>
       <tr>
