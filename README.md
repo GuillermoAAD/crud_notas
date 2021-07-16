@@ -1,6 +1,6 @@
 # crud_notas
 
-Es un sitema CRUD de notas.
+Es un sistema CRUD de notas.
 
 
 ### Base de Datos
@@ -17,14 +17,14 @@ La Base de Datos contiene las tablas usuario y nota.
 
 - Tabla nota
   - Contiene los campos id_nota, titulo, descripcion, fecha, id_usuario.
-  - id_usuario es clave foranea e identifica que notas pertenecen a determinado usuario.
+  - id_usuario es clave foránea e identifica que notas pertenecen a determinado usuario.
   
 
 ### Cargar Base de Datos
 
 Hay 2 opciones:
 
-- Copiar y pegar en la terminal sql todos los comandos del archivo "comandos_bd.sql".
+- Copiar y pegar en la terminal SQL todos los comandos del archivo "comandos_bd.sql".
 - O importar la bd con el archivo "db_notas.sql"
 
 
@@ -32,16 +32,17 @@ Hay 2 opciones:
 
 Por defecto carga el usuario y la contraseña de root, pero se puede borrar.
 
-Hice uso de sesiones, por lo que si no se ha iniciado sesion mandara a la pagina del login.
+Hice uso de sesiones, por lo que si no se ha iniciado sesión mandara a la pagina del login.
 
 ![Login](https://github.com/GuillermoAAD/crud_notas/blob/master/Capturas/1.png)
 
 ### Index
 
 En la pagina principal se hacer todo
-- En la parte superior se muestra el usuario y el numero de notas que tiene, ademas la opción de salir.
+- En la parte superior se muestra el usuario y el numero de notas que tiene, además la opción de salir.
 - Debajo de eso se muestra el listado con todas las notas, y las opciones para agregar, editar o borrarlas.
 
 ![Index sin notas](https://github.com/GuillermoAAD/crud_notas/blob/master/Capturas/2.png)
 ![Index con notas](https://github.com/GuillermoAAD/crud_notas/blob/master/Capturas/3.png)
 
+![image](https://user-images.githubusercontent.com/55001314/126002752-bacf3792-f5c9-442b-9acc-5fb304da618a.png)
