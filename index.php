@@ -36,8 +36,7 @@
          <td>
             FECHA DE CREACION
          </td>
-         <td>
-            
+         <td colspan='2'>
          </td>
       </tr>
 
@@ -54,11 +53,9 @@
             <td>
                -------
             </td>
-            <td>
+            <td colspan='2'>
                <input type='hidden' name='id_usuario' value='<?= $id_usuario ?>' />
-               <!-- <?php echo "<a href='q.php'> " ?> -->
                   <input name='crear_nota' type='submit' value='Agregar Nota' >
-               <!-- </a> -->
             </td>
          </form>
       </tr>
@@ -87,14 +84,16 @@
             
                <td>
                   <input type='hidden' name='id_nota' value='<?= $id_nota ?>' />
-                  <input type='hidden' name='id_usuario' value='<?= $id_usuario ?>' />
-                  
                   <input name='actualizar_nota' type='submit' value='Actualizar' >
-                  
-                  <!--   <input type='button' value='Eliminar'>  -->
-                  
                </td>
             </form>
+
+            <td>
+               <form action='eliminar_nota.php' method='POST'>
+                  <input type='hidden' name='id_nota' value='<?= $id_nota ?>' />
+                  <input name='eliminar_nota' type='submit' value='Eliminar' >
+               </form>
+            </td>
                
          </tr>
       <?php } ?>

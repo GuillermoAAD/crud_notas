@@ -42,14 +42,14 @@ login
 Mostrar notas                    OK
 Editar notas                     OK
 Agregar notas nuevas             OK
-Eliminar notas
+Eliminar notas                   OK
 
 
 
 git init
 git add .
 git status
-git commit -m "Se muestran las notas guardadas en bd"
+git commit -m "Permite eliminar notas"
 
 git remote add origin https://github.com/GuillermoAAD/crud_notas.git
 git push origin master
